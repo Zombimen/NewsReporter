@@ -14,4 +14,5 @@ const BarLeft = () =>
                 </ul>
             </nav>
         </div>
+        
 export default BarLeft

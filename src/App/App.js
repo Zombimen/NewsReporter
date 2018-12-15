@@ -4,7 +4,7 @@ import Main from './Main/Main'
 import Aside from './Aside/Aside'
 import Footer from './Footer/Footer'
 import {Route} from 'react-router-dom'
-import FATW1 from './Main/MainLeft/MainLeftBlocks/FATWblocks/FATW1'
+import FATWPage from './Main/FATWPage';
 
 class App extends Component {
   render() {
@@ -15,15 +15,8 @@ class App extends Component {
           <Route path="/" exact render={() => {
             return(<Main/>)
           }}/>
-          <Route path="/FATW1" render={() => {
-            return(<FATW1/>)
-          }}/>
-          <Route path="/FATW2" render={() => {
-            return(<FATW1/>)
-          }}/>
-          <Route path="/FATW3" render={() => {
-            return(<FATW1/>)
-          }}/>
+          <Route path="/FATW/:FATWId" component={FATWPage}/>
+          
           <Aside/>
      </div>
           <Footer/>
